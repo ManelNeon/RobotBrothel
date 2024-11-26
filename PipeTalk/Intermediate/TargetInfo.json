@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "PipeTalk",
+			"Path": "..\\Source\\PipeTalk.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "PipeTalkEditor",
+			"Path": "..\\Source\\PipeTalkEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

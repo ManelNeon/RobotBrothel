@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"C:\\GameDev\\UnrealProjects\\RobotBrothel\\PipeTalk\\Source\\PipeTalk\\PipeTalk.Build.cs",
+		"C:\\GameDev\\UnrealProjects\\RobotBrothel\\PipeTalk\\Source\\PipeTalk.Target.cs",
+		"C:\\GameDev\\UnrealProjects\\RobotBrothel\\PipeTalk\\Source\\PipeTalkEditor.Target.cs"
+	],
+	"EngineVersion": "5.4.4"
+}

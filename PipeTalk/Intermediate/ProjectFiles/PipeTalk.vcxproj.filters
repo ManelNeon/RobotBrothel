@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\PipeTalk.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\PipeTalk.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\PipeTalkEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.vsconfig" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\PipeTalk">
+      <UniqueIdentifier>{83EFE99B-CF2E-3F88-92A7-1959C1E32BBA}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\PipeTalk\MapManager.cpp">
+      <Filter>Source\PipeTalk</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PipeTalk\MapManager.h">
+      <Filter>Source\PipeTalk</Filter>
+    </ClInclude>
+    <None Include="..\..\Source\PipeTalk\PipeTalk.Build.cs">
+      <Filter>Source\PipeTalk</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\PipeTalk\PipeTalk.cpp">
+      <Filter>Source\PipeTalk</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PipeTalk\PipeTalk.h">
+      <Filter>Source\PipeTalk</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\PipeTalk\PipeTalkCharacter.cpp">
+      <Filter>Source\PipeTalk</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PipeTalk\PipeTalkCharacter.h">
+      <Filter>Source\PipeTalk</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\PipeTalk\PipeTalkGameInstance.cpp">
+      <Filter>Source\PipeTalk</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PipeTalk\PipeTalkGameInstance.h">
+      <Filter>Source\PipeTalk</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\PipeTalk\PipeTalkGameMode.cpp">
+      <Filter>Source\PipeTalk</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PipeTalk\PipeTalkGameMode.h">
+      <Filter>Source\PipeTalk</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\PipeTalk\PipeTalkPlayerController.cpp">
+      <Filter>Source\PipeTalk</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PipeTalk\PipeTalkPlayerController.h">
+      <Filter>Source\PipeTalk</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\PipeTalk\Plot.cpp">
+      <Filter>Source\PipeTalk</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PipeTalk\Plot.h">
+      <Filter>Source\PipeTalk</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\PipeTalk\Room.cpp">
+      <Filter>Source\PipeTalk</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PipeTalk\Room.h">
+      <Filter>Source\PipeTalk</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,17 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\gamedev\\unrealprojects\\robotbrothel\\pipetalk\\intermediate\\build\\win64\\unrealeditor\\inc\\pipetalk\\uht\\mapmanager.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\gamedev\\unrealprojects\\robotbrothel\\pipetalk\\intermediate\\build\\win64\\x64\\pipetalkeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\gamedev\\unrealprojects\\robotbrothel\\pipetalk\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\pipetalk\\definitions.pipetalk.h",
+            "c:\\gamedev\\unrealprojects\\robotbrothel\\pipetalk\\source\\pipetalk\\mapmanager.h",
+            "c:\\gamedev\\unrealprojects\\robotbrothel\\pipetalk\\source\\pipetalk\\plot.h",
+            "c:\\gamedev\\unrealprojects\\robotbrothel\\pipetalk\\intermediate\\build\\win64\\unrealeditor\\inc\\pipetalk\\uht\\plot.generated.h",
+            "c:\\gamedev\\unrealprojects\\robotbrothel\\pipetalk\\intermediate\\build\\win64\\unrealeditor\\inc\\pipetalk\\uht\\mapmanager.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

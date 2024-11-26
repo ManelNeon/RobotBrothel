@@ -1,0 +1,24 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"C:/GameDev/UnrealProjects/RobotBrothel/PipeTalk/Content/StarterContent/HDRI/HDRI_Epic_Courtyard_Daylight.uasset",
+				"C:/GameDev/UnrealProjects/RobotBrothel/PipeTalk/Content/Levels/L_Game.umap",
+				"C:/GameDev/UnrealProjects/RobotBrothel/PipeTalk/Content/WidgetBlueprints/WBP_Mouse.uasset",
+				"C:/GameDev/UnrealProjects/RobotBrothel/PipeTalk/Content/WidgetBlueprints/WBP_PlotUI.uasset",
+				"C:/GameDev/UnrealProjects/RobotBrothel/PipeTalk/Content/Input/Actions/IA_Move.uasset",
+				"C:/GameDev/UnrealProjects/RobotBrothel/PipeTalk/Content/Input/IMC_Default.uasset",
+				"C:/GameDev/UnrealProjects/RobotBrothel/PipeTalk/Content/Blueprints/BP_MapManager.uasset",
+				"C:/GameDev/UnrealProjects/RobotBrothel/PipeTalk/Content/Blueprints/BP_Plot.uasset",
+				"C:/GameDev/UnrealProjects/RobotBrothel/PipeTalk/Content/Blueprints/BP_PipeTalkCharacter.uasset",
+				"C:/GameDev/UnrealProjects/RobotBrothel/PipeTalk/Content/Blueprints/BP_PipeTalkGameInstance.uasset",
+				"C:/GameDev/UnrealProjects/RobotBrothel/PipeTalk/Content/Blueprints/BP_PipeTalkGameMode.uasset",
+				"C:/GameDev/UnrealProjects/RobotBrothel/PipeTalk/Content/Blueprints/BP_PipeTalkPlayerController.uasset",
+				"C:/GameDev/UnrealProjects/RobotBrothel/PipeTalk/Content/Blueprints/BP_Room.uasset"
+			]
+		}
+	]
+}
