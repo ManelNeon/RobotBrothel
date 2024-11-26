@@ -18,15 +18,10 @@ AMapManager::AMapManager()
 	_PlotClass = (UClass*)second_finder.Object->GeneratedClass;
 }
 
-void AMapManager::BuildFirstRoom(APlot* plot)
+
+void AMapManager::BuildFirstRoom()
 {
 	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Yellow, TEXT("Is Building"));
-
-	/*for (size_t i{0}; i < _Plots.Max(); ++i)
-	{
-		if (_Plots[i] == plot)
-			GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Black, TEXT("Found it"));
-	}*/
 }
 
 // Called when the game starts or when spawned

@@ -80,7 +80,13 @@ struct Z_Construct_UClass_APlot_Statics
 		{ "IncludePath", "Plot.h" },
 		{ "ModuleRelativePath", "Plot.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__MapManager_MetaData[] = {
+		{ "Category", "Plot" },
+		{ "ModuleRelativePath", "Plot.h" },
+	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp__MapManager;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_APlot_GetMapManager, "GetMapManager" }, // 2276971712
@@ -91,6 +97,11 @@ struct Z_Construct_UClass_APlot_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlot_Statics::NewProp__MapManager = { "_MapManager", nullptr, (EPropertyFlags)0x0020080000020001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlot, _MapManager), Z_Construct_UClass_AMapManager_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__MapManager_MetaData), NewProp__MapManager_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_APlot_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlot_Statics::NewProp__MapManager,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_APlot_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_APlot_Statics::DependentSingletons[])() = {
 	(UObject* (*)())Z_Construct_UClass_AActor,
 	(UObject* (*)())Z_Construct_UPackage__Script_PipeTalk,
@@ -102,11 +113,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_APlot_Statics::ClassPar
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
 	FuncInfo,
-	nullptr,
+	Z_Construct_UClass_APlot_Statics::PropPointers,
 	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
 	UE_ARRAY_COUNT(FuncInfo),
-	0,
+	UE_ARRAY_COUNT(Z_Construct_UClass_APlot_Statics::PropPointers),
 	0,
 	0x009000A4u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APlot_Statics::Class_MetaDataParams), Z_Construct_UClass_APlot_Statics::Class_MetaDataParams)
@@ -131,10 +142,10 @@ APlot::~APlot() {}
 struct Z_CompiledInDeferFile_FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_Plot_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_APlot, APlot::StaticClass, TEXT("APlot"), &Z_Registration_Info_UClass_APlot, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlot), 939865655U) },
+		{ Z_Construct_UClass_APlot, APlot::StaticClass, TEXT("APlot"), &Z_Registration_Info_UClass_APlot, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlot), 4175324055U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_Plot_h_2767760986(TEXT("/Script/PipeTalk"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_Plot_h_2901488071(TEXT("/Script/PipeTalk"),
 	Z_CompiledInDeferFile_FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_Plot_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_Plot_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

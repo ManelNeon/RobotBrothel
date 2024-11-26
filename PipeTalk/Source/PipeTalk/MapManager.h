@@ -17,7 +17,7 @@ public:
 	AMapManager();
 
 	UFUNCTION(BlueprintCallable, Category = "Map Manager")
-	void BuildFirstRoom(APlot* plot);
+	void BuildFirstRoom();
 
 protected:
 	// Called when the game starts or when spawned

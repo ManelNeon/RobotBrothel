@@ -20,27 +20,15 @@ UPackage* Z_Construct_UPackage__Script_PipeTalk();
 // Begin Class AMapManager Function BuildFirstRoom
 struct Z_Construct_UFunction_AMapManager_BuildFirstRoom_Statics
 {
-	struct MapManager_eventBuildFirstRoom_Parms
-	{
-		APlot* plot;
-	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Map Manager" },
 		{ "ModuleRelativePath", "MapManager.h" },
 	};
 #endif // WITH_METADATA
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_plot;
-	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AMapManager_BuildFirstRoom_Statics::NewProp_plot = { "plot", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(MapManager_eventBuildFirstRoom_Parms, plot), Z_Construct_UClass_APlot_NoRegister, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMapManager_BuildFirstRoom_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMapManager_BuildFirstRoom_Statics::NewProp_plot,
-};
-static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AMapManager_BuildFirstRoom_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AMapManager_BuildFirstRoom_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMapManager, nullptr, "BuildFirstRoom", nullptr, nullptr, Z_Construct_UFunction_AMapManager_BuildFirstRoom_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMapManager_BuildFirstRoom_Statics::PropPointers), sizeof(Z_Construct_UFunction_AMapManager_BuildFirstRoom_Statics::MapManager_eventBuildFirstRoom_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AMapManager_BuildFirstRoom_Statics::Function_MetaDataParams), Z_Construct_UFunction_AMapManager_BuildFirstRoom_Statics::Function_MetaDataParams) };
-static_assert(sizeof(Z_Construct_UFunction_AMapManager_BuildFirstRoom_Statics::MapManager_eventBuildFirstRoom_Parms) < MAX_uint16);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AMapManager_BuildFirstRoom_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMapManager, nullptr, "BuildFirstRoom", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AMapManager_BuildFirstRoom_Statics::Function_MetaDataParams), Z_Construct_UFunction_AMapManager_BuildFirstRoom_Statics::Function_MetaDataParams) };
 UFunction* Z_Construct_UFunction_AMapManager_BuildFirstRoom()
 {
 	static UFunction* ReturnFunction = nullptr;
@@ -52,10 +40,9 @@ UFunction* Z_Construct_UFunction_AMapManager_BuildFirstRoom()
 }
 DEFINE_FUNCTION(AMapManager::execBuildFirstRoom)
 {
-	P_GET_OBJECT(APlot,Z_Param_plot);
 	P_FINISH;
 	P_NATIVE_BEGIN;
-	P_THIS->BuildFirstRoom(Z_Param_plot);
+	P_THIS->BuildFirstRoom();
 	P_NATIVE_END;
 }
 // End Class AMapManager Function BuildFirstRoom
@@ -91,7 +78,7 @@ struct Z_Construct_UClass_AMapManager_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_AMapManager_BuildFirstRoom, "BuildFirstRoom" }, // 3726416182
+		{ &Z_Construct_UFunction_AMapManager_BuildFirstRoom, "BuildFirstRoom" }, // 2218938103
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -146,10 +133,10 @@ AMapManager::~AMapManager() {}
 struct Z_CompiledInDeferFile_FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_MapManager_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AMapManager, AMapManager::StaticClass, TEXT("AMapManager"), &Z_Registration_Info_UClass_AMapManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMapManager), 1497724903U) },
+		{ Z_Construct_UClass_AMapManager, AMapManager::StaticClass, TEXT("AMapManager"), &Z_Registration_Info_UClass_AMapManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMapManager), 750365190U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_MapManager_h_645941177(TEXT("/Script/PipeTalk"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_MapManager_h_1698324872(TEXT("/Script/PipeTalk"),
 	Z_CompiledInDeferFile_FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_MapManager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_MapManager_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

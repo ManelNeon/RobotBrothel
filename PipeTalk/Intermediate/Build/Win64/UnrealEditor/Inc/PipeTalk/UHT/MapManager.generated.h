@@ -9,7 +9,6 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-class APlot;
 #ifdef PIPETALK_MapManager_generated_h
 #error "MapManager.generated.h already included, missing '#pragma once' in MapManager.h"
 #endif
