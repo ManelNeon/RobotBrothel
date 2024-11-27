@@ -45,6 +45,12 @@
     <ClInclude Include="..\..\Source\PipeTalk\PipeTalk.h">
       <Filter>Source\PipeTalk</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\PipeTalk\PipeTalkAICharacters.cpp">
+      <Filter>Source\PipeTalk</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PipeTalk\PipeTalkAICharacters.h">
+      <Filter>Source\PipeTalk</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\PipeTalk\PipeTalkCharacter.cpp">
       <Filter>Source\PipeTalk</Filter>
     </ClCompile>

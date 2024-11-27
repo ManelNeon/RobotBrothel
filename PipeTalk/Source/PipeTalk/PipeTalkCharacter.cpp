@@ -4,6 +4,9 @@
 #include "PipeTalkCharacter.h"
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
+#include "Runtime/Engine/Classes/Kismet/GameplayStatics.h"
+#include "Runtime/Engine/Classes/GameFramework/PlayerController.h"
+#include "SceneView.h"
 #include "InputActionValue.h"
 
 // Sets default values

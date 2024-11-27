@@ -14,7 +14,12 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define PIPETALK_PipeTalkGameInstance_generated_h
 
-#define FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_PipeTalkGameInstance_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_PipeTalkGameInstance_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execGiveMoney); \
+	DECLARE_FUNCTION(execGiveXP);
+
+
+#define FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_PipeTalkGameInstance_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUPipeTalkGameInstance(); \
 	friend struct Z_Construct_UClass_UPipeTalkGameInstance_Statics; \
@@ -23,9 +28,7 @@ public: \
 	DECLARE_SERIALIZER(UPipeTalkGameInstance)
 
 
-#define FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_PipeTalkGameInstance_h_15_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API UPipeTalkGameInstance(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+#define FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_PipeTalkGameInstance_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UPipeTalkGameInstance(UPipeTalkGameInstance&&); \
@@ -33,16 +36,17 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UPipeTalkGameInstance); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UPipeTalkGameInstance); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UPipeTalkGameInstance) \
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UPipeTalkGameInstance) \
 	NO_API virtual ~UPipeTalkGameInstance();
 
 
-#define FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_PipeTalkGameInstance_h_12_PROLOG
-#define FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_PipeTalkGameInstance_h_15_GENERATED_BODY \
+#define FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_PipeTalkGameInstance_h_11_PROLOG
+#define FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_PipeTalkGameInstance_h_14_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_PipeTalkGameInstance_h_15_INCLASS_NO_PURE_DECLS \
-	FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_PipeTalkGameInstance_h_15_ENHANCED_CONSTRUCTORS \
+	FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_PipeTalkGameInstance_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_PipeTalkGameInstance_h_14_INCLASS_NO_PURE_DECLS \
+	FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_PipeTalkGameInstance_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

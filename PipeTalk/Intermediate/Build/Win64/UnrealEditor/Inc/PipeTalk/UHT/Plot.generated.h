@@ -16,6 +16,9 @@ class AMapManager;
 #define PIPETALK_Plot_generated_h
 
 #define FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_Plot_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execGetIsPlotBuyable); \
+	DECLARE_FUNCTION(execGetColumnIndex); \
+	DECLARE_FUNCTION(execGetRowIndex); \
 	DECLARE_FUNCTION(execGetMapManager);
 
 

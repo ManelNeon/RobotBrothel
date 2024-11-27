@@ -19,8 +19,25 @@ public:
 
 	void SetMapManager(AMapManager* mapManager);
 
-	UFUNCTION(BlueprintCallable, Category = "Plot Functions")
+	UFUNCTION(BlueprintPure, Category = "Plot Functions")
 	AMapManager* GetMapManager();
+
+	void SetRowIndex(int row);
+
+	UFUNCTION(BlueprintPure, Category = "Plot Functions")
+	int GetRowIndex();
+
+	void SetColumnIndex(int column);
+
+	UFUNCTION(BlueprintPure, Category = "Plot Functions")
+	int GetColumnIndex();
+
+	UFUNCTION(BlueprintPure, Category = "Plot Functions")
+	bool GetIsPlotBuyable();
+
+	void SetIsPlotBuyable(bool isBuyable);
+
+	void DestroyPlot();
 
 protected:
 	// Called when the game starts or when spawned
@@ -28,6 +45,12 @@ protected:
 
 	UPROPERTY(VisibleAnywhere)
 	AMapManager* _MapManager;
+
+	int _RowIndex;
+
+	int _ColumnIndex;
+
+	bool _IsPlotBuyable;
 
 public:
 	// Called every frame

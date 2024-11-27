@@ -17,7 +17,21 @@
 				"C:/GameDev/UnrealProjects/RobotBrothel/PipeTalk/Content/Blueprints/BP_PipeTalkGameInstance.uasset",
 				"C:/GameDev/UnrealProjects/RobotBrothel/PipeTalk/Content/Blueprints/BP_PipeTalkGameMode.uasset",
 				"C:/GameDev/UnrealProjects/RobotBrothel/PipeTalk/Content/Blueprints/BP_PipeTalkPlayerController.uasset",
-				"C:/GameDev/UnrealProjects/RobotBrothel/PipeTalk/Content/Blueprints/BP_Room.uasset"
+				"C:/GameDev/UnrealProjects/RobotBrothel/PipeTalk/Content/Blueprints/BP_PipeTalkAI.uasset",
+				"C:/GameDev/UnrealProjects/RobotBrothel/PipeTalk/Content/Blueprints/BP_AIController.uasset",
+				"C:/GameDev/UnrealProjects/RobotBrothel/PipeTalk/Content/Levels/L_Test.umap",
+				"C:/GameDev/UnrealProjects/RobotBrothel/PipeTalk/Content/Input/Actions/IA_Clicked.uasset",
+				"C:/GameDev/UnrealProjects/RobotBrothel/PipeTalk/Content/BlueprintInterface/BPI_Interactable.uasset",
+				"C:/GameDev/UnrealProjects/RobotBrothel/PipeTalk/Content/Blueprints/BP_Entrance.uasset",
+				"C:/GameDev/UnrealProjects/RobotBrothel/PipeTalk/Content/Blueprints/BP_BarRoom.uasset",
+				"C:/GameDev/UnrealProjects/RobotBrothel/PipeTalk/Content/Blueprints/BP_RelaxationRoom.uasset",
+				"C:/GameDev/UnrealProjects/RobotBrothel/PipeTalk/Content/Blueprints/BP_TrainingRoom.uasset",
+				"C:/GameDev/UnrealProjects/RobotBrothel/PipeTalk/Content/Blueprints/BP_VIPRoom.uasset",
+				"C:/GameDev/UnrealProjects/RobotBrothel/PipeTalk/Content/Blueprints/BP_KnowledgeRoom.uasset",
+				"C:/GameDev/UnrealProjects/RobotBrothel/PipeTalk/Content/Input/Actions/IA_RightClicked.uasset",
+				"C:/GameDev/UnrealProjects/RobotBrothel/PipeTalk/Content/Input/Actions/IA_LeftClicked.uasset",
+				"C:/GameDev/UnrealProjects/RobotBrothel/PipeTalk/Content/Blueprints/BP_Room.uasset",
+				"C:/GameDev/UnrealProjects/RobotBrothel/PipeTalk/Content/BlueprintInterface/InteractableInterface.uasset"
 			]
 		}
 	]

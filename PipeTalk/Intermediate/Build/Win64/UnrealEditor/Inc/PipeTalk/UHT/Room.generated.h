@@ -14,6 +14,23 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define PIPETALK_Room_generated_h
 
+#define FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_Room_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execRemoveClient); \
+	DECLARE_FUNCTION(execAddClient); \
+	DECLARE_FUNCTION(execRemoveWorkingHostess); \
+	DECLARE_FUNCTION(execAddWorkingHostess); \
+	DECLARE_FUNCTION(execGetIsFullClients); \
+	DECLARE_FUNCTION(execGetIsFullHostess); \
+	DECLARE_FUNCTION(execGetCurrentClientCapacity); \
+	DECLARE_FUNCTION(execGetCurrentHostessCapacity); \
+	DECLARE_FUNCTION(execSetIsOccupied); \
+	DECLARE_FUNCTION(execGetIsOccupied); \
+	DECLARE_FUNCTION(execSetTeleportJobLocation); \
+	DECLARE_FUNCTION(execGetJobTeleportLocations); \
+	DECLARE_FUNCTION(execSetTeleportLocation); \
+	DECLARE_FUNCTION(execGetTeleportLocation);
+
+
 #define FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_Room_h_12_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesARoom(); \
@@ -39,6 +56,7 @@ public: \
 #define FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_Room_h_12_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_Room_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_Room_h_12_INCLASS_NO_PURE_DECLS \
 	FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_Room_h_12_ENHANCED_CONSTRUCTORS \
 private: \
