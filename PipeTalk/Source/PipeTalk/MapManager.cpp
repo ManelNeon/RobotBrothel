@@ -51,22 +51,22 @@ void AMapManager::BuildRoom(int row, int column, ERooms roomCode)
 		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("No Plot Here SUPPOSTAMENTE"));
 		return;
 	}
+
+	auto gameInstance = Cast<UPipeTalkGameInstance>(GetGameInstance());
 	
 	switch (roomCode)
 	{
 	case ERooms::ENTRANCE_ROOM:
 
 		GetWorld()->SpawnActor(_EntranceClass)->SetActorLocation((_Plots[row * 7 + column]->GetActorLocation()));
-
-		GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Yellow, TEXT("Entrance Room"));
-
+		
 		break;
 
 	case ERooms::BAR_ROOM:
 
 		GetWorld()->SpawnActor(_BarClass)->SetActorLocation((_Plots[row * 7 + column]->GetActorLocation()));
 
-		GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Yellow, TEXT("Bar Room"));
+		gameInstance->GiveMoney(-200);
 
 		break;
 
@@ -74,32 +74,32 @@ void AMapManager::BuildRoom(int row, int column, ERooms roomCode)
 
 		GetWorld()->SpawnActor(_RelaxationClass)->SetActorLocation((_Plots[row * 7 + column]->GetActorLocation()));
 
-		GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Yellow, TEXT("Relaxation Room"));
-
+		gameInstance->GiveMoney(-250);
+		
 		break;
 
 	case ERooms::TRAINING_ROOM:
 
 		GetWorld()->SpawnActor(_TrainingClass)->SetActorLocation((_Plots[row * 7 + column]->GetActorLocation()));
 
-		GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Yellow, TEXT("Training Room"));
-
+		gameInstance->GiveMoney(-300);
+		
 		break;
 
 	case ERooms::VIP_ROOM:
 
 		GetWorld()->SpawnActor(_VIPClass)->SetActorLocation((_Plots[row * 7 + column]->GetActorLocation()));
 
-		GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Yellow, TEXT("VIP Room"));
-		
+		gameInstance->GiveMoney(-350);
+
 		break;
 
 	case ERooms::KNOWLEDGE_ROOM:
 
 		GetWorld()->SpawnActor(_KnowledgeClass)->SetActorLocation((_Plots[row * 7 + column]->GetActorLocation()));
 
-		GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Yellow, TEXT("Knowledge Room"));
-		
+		gameInstance->GiveMoney(-400);
+
 		break;
 
 	case ERooms::TOTAL_ROOM:
@@ -124,6 +124,21 @@ void AMapManager::BuildRoom(int row, int column, ERooms roomCode)
 	_Plots[row * 7 + column]->DestroyPlot();
 
 	_Plots[row * 7 + column] = nullptr;
+}
+
+void AMapManager::CreateHostess()
+{
+	auto gameInstance = Cast<UPipeTalkGameInstance>(GetGameInstance());
+
+	auto firstNpc = GetWorld()->SpawnActor(_AIClass);
+
+	firstNpc->SetActorLocation(FVector(-280, 3070, 100));
+
+	auto npcToAdd = Cast<APipeTalkAICharacters>(firstNpc);
+
+	gameInstance->HostessArray.Add(npcToAdd);
+
+	npcToAdd->SetID(gameInstance->HostessArray.Num() - 1);
 }
 
 // Called when the game starts or when spawned
@@ -161,15 +176,7 @@ void AMapManager::BeginPlay()
 
 	BuildRoom(1, 3, ERooms::BAR_ROOM);
 
-	auto gameInstance = Cast<UPipeTalkGameInstance>(GetGameInstance());
-
-	auto firstNpc = GetWorld()->SpawnActor(_AIClass);
-
-	firstNpc->SetActorLocation(FVector(-280, 3070, 100));
-
-	auto npcToAdd = Cast<APipeTalkAICharacters>(firstNpc);
-	
-	gameInstance->HostessArray.Add(npcToAdd);
+	CreateHostess();
 }
 
 // Called every frame

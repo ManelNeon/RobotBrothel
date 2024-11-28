@@ -20,15 +20,27 @@ UPackage* Z_Construct_UPackage__Script_PipeTalk();
 // Begin Class ARoom Function AddClient
 struct Z_Construct_UFunction_ARoom_AddClient_Statics
 {
+	struct Room_eventAddClient_Parms
+	{
+		int32 id;
+	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Room Functions" },
 		{ "ModuleRelativePath", "Room.h" },
 	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FIntPropertyParams NewProp_id;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ARoom_AddClient_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ARoom, nullptr, "AddClient", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoom_AddClient_Statics::Function_MetaDataParams), Z_Construct_UFunction_ARoom_AddClient_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_ARoom_AddClient_Statics::NewProp_id = { "id", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(Room_eventAddClient_Parms, id), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ARoom_AddClient_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ARoom_AddClient_Statics::NewProp_id,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoom_AddClient_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ARoom_AddClient_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ARoom, nullptr, "AddClient", nullptr, nullptr, Z_Construct_UFunction_ARoom_AddClient_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ARoom_AddClient_Statics::PropPointers), sizeof(Z_Construct_UFunction_ARoom_AddClient_Statics::Room_eventAddClient_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoom_AddClient_Statics::Function_MetaDataParams), Z_Construct_UFunction_ARoom_AddClient_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_ARoom_AddClient_Statics::Room_eventAddClient_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_ARoom_AddClient()
 {
 	static UFunction* ReturnFunction = nullptr;
@@ -40,9 +52,10 @@ UFunction* Z_Construct_UFunction_ARoom_AddClient()
 }
 DEFINE_FUNCTION(ARoom::execAddClient)
 {
+	P_GET_PROPERTY(FIntProperty,Z_Param_id);
 	P_FINISH;
 	P_NATIVE_BEGIN;
-	P_THIS->AddClient();
+	P_THIS->AddClient(Z_Param_id);
 	P_NATIVE_END;
 }
 // End Class ARoom Function AddClient
@@ -50,15 +63,27 @@ DEFINE_FUNCTION(ARoom::execAddClient)
 // Begin Class ARoom Function AddWorkingHostess
 struct Z_Construct_UFunction_ARoom_AddWorkingHostess_Statics
 {
+	struct Room_eventAddWorkingHostess_Parms
+	{
+		int32 id;
+	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Room Functions" },
 		{ "ModuleRelativePath", "Room.h" },
 	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FIntPropertyParams NewProp_id;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ARoom_AddWorkingHostess_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ARoom, nullptr, "AddWorkingHostess", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoom_AddWorkingHostess_Statics::Function_MetaDataParams), Z_Construct_UFunction_ARoom_AddWorkingHostess_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_ARoom_AddWorkingHostess_Statics::NewProp_id = { "id", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(Room_eventAddWorkingHostess_Parms, id), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ARoom_AddWorkingHostess_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ARoom_AddWorkingHostess_Statics::NewProp_id,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoom_AddWorkingHostess_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ARoom_AddWorkingHostess_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ARoom, nullptr, "AddWorkingHostess", nullptr, nullptr, Z_Construct_UFunction_ARoom_AddWorkingHostess_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ARoom_AddWorkingHostess_Statics::PropPointers), sizeof(Z_Construct_UFunction_ARoom_AddWorkingHostess_Statics::Room_eventAddWorkingHostess_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoom_AddWorkingHostess_Statics::Function_MetaDataParams), Z_Construct_UFunction_ARoom_AddWorkingHostess_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_ARoom_AddWorkingHostess_Statics::Room_eventAddWorkingHostess_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_ARoom_AddWorkingHostess()
 {
 	static UFunction* ReturnFunction = nullptr;
@@ -70,9 +95,10 @@ UFunction* Z_Construct_UFunction_ARoom_AddWorkingHostess()
 }
 DEFINE_FUNCTION(ARoom::execAddWorkingHostess)
 {
+	P_GET_PROPERTY(FIntProperty,Z_Param_id);
 	P_FINISH;
 	P_NATIVE_BEGIN;
-	P_THIS->AddWorkingHostess();
+	P_THIS->AddWorkingHostess(Z_Param_id);
 	P_NATIVE_END;
 }
 // End Class ARoom Function AddWorkingHostess
@@ -347,6 +373,90 @@ DEFINE_FUNCTION(ARoom::execGetJobTeleportLocations)
 }
 // End Class ARoom Function GetJobTeleportLocations
 
+// Begin Class ARoom Function GetMaxClientCapacity
+struct Z_Construct_UFunction_ARoom_GetMaxClientCapacity_Statics
+{
+	struct Room_eventGetMaxClientCapacity_Parms
+	{
+		int32 ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Room Functions" },
+		{ "ModuleRelativePath", "Room.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FIntPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_ARoom_GetMaxClientCapacity_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(Room_eventGetMaxClientCapacity_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ARoom_GetMaxClientCapacity_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ARoom_GetMaxClientCapacity_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoom_GetMaxClientCapacity_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ARoom_GetMaxClientCapacity_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ARoom, nullptr, "GetMaxClientCapacity", nullptr, nullptr, Z_Construct_UFunction_ARoom_GetMaxClientCapacity_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ARoom_GetMaxClientCapacity_Statics::PropPointers), sizeof(Z_Construct_UFunction_ARoom_GetMaxClientCapacity_Statics::Room_eventGetMaxClientCapacity_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoom_GetMaxClientCapacity_Statics::Function_MetaDataParams), Z_Construct_UFunction_ARoom_GetMaxClientCapacity_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_ARoom_GetMaxClientCapacity_Statics::Room_eventGetMaxClientCapacity_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_ARoom_GetMaxClientCapacity()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ARoom_GetMaxClientCapacity_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ARoom::execGetMaxClientCapacity)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->GetMaxClientCapacity();
+	P_NATIVE_END;
+}
+// End Class ARoom Function GetMaxClientCapacity
+
+// Begin Class ARoom Function GetMaxHostessCapacity
+struct Z_Construct_UFunction_ARoom_GetMaxHostessCapacity_Statics
+{
+	struct Room_eventGetMaxHostessCapacity_Parms
+	{
+		int32 ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Room Functions" },
+		{ "ModuleRelativePath", "Room.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FIntPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_ARoom_GetMaxHostessCapacity_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(Room_eventGetMaxHostessCapacity_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ARoom_GetMaxHostessCapacity_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ARoom_GetMaxHostessCapacity_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoom_GetMaxHostessCapacity_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ARoom_GetMaxHostessCapacity_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ARoom, nullptr, "GetMaxHostessCapacity", nullptr, nullptr, Z_Construct_UFunction_ARoom_GetMaxHostessCapacity_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ARoom_GetMaxHostessCapacity_Statics::PropPointers), sizeof(Z_Construct_UFunction_ARoom_GetMaxHostessCapacity_Statics::Room_eventGetMaxHostessCapacity_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoom_GetMaxHostessCapacity_Statics::Function_MetaDataParams), Z_Construct_UFunction_ARoom_GetMaxHostessCapacity_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_ARoom_GetMaxHostessCapacity_Statics::Room_eventGetMaxHostessCapacity_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_ARoom_GetMaxHostessCapacity()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ARoom_GetMaxHostessCapacity_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ARoom::execGetMaxHostessCapacity)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->GetMaxHostessCapacity();
+	P_NATIVE_END;
+}
+// End Class ARoom Function GetMaxHostessCapacity
+
 // Begin Class ARoom Function GetTeleportLocation
 struct Z_Construct_UFunction_ARoom_GetTeleportLocation_Statics
 {
@@ -392,15 +502,27 @@ DEFINE_FUNCTION(ARoom::execGetTeleportLocation)
 // Begin Class ARoom Function RemoveClient
 struct Z_Construct_UFunction_ARoom_RemoveClient_Statics
 {
+	struct Room_eventRemoveClient_Parms
+	{
+		int32 id;
+	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Room Functions" },
 		{ "ModuleRelativePath", "Room.h" },
 	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FIntPropertyParams NewProp_id;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ARoom_RemoveClient_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ARoom, nullptr, "RemoveClient", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoom_RemoveClient_Statics::Function_MetaDataParams), Z_Construct_UFunction_ARoom_RemoveClient_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_ARoom_RemoveClient_Statics::NewProp_id = { "id", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(Room_eventRemoveClient_Parms, id), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ARoom_RemoveClient_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ARoom_RemoveClient_Statics::NewProp_id,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoom_RemoveClient_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ARoom_RemoveClient_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ARoom, nullptr, "RemoveClient", nullptr, nullptr, Z_Construct_UFunction_ARoom_RemoveClient_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ARoom_RemoveClient_Statics::PropPointers), sizeof(Z_Construct_UFunction_ARoom_RemoveClient_Statics::Room_eventRemoveClient_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoom_RemoveClient_Statics::Function_MetaDataParams), Z_Construct_UFunction_ARoom_RemoveClient_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_ARoom_RemoveClient_Statics::Room_eventRemoveClient_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_ARoom_RemoveClient()
 {
 	static UFunction* ReturnFunction = nullptr;
@@ -412,9 +534,10 @@ UFunction* Z_Construct_UFunction_ARoom_RemoveClient()
 }
 DEFINE_FUNCTION(ARoom::execRemoveClient)
 {
+	P_GET_PROPERTY(FIntProperty,Z_Param_id);
 	P_FINISH;
 	P_NATIVE_BEGIN;
-	P_THIS->RemoveClient();
+	P_THIS->RemoveClient(Z_Param_id);
 	P_NATIVE_END;
 }
 // End Class ARoom Function RemoveClient
@@ -422,15 +545,27 @@ DEFINE_FUNCTION(ARoom::execRemoveClient)
 // Begin Class ARoom Function RemoveWorkingHostess
 struct Z_Construct_UFunction_ARoom_RemoveWorkingHostess_Statics
 {
+	struct Room_eventRemoveWorkingHostess_Parms
+	{
+		int32 id;
+	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Room Functions" },
 		{ "ModuleRelativePath", "Room.h" },
 	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FIntPropertyParams NewProp_id;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ARoom_RemoveWorkingHostess_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ARoom, nullptr, "RemoveWorkingHostess", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoom_RemoveWorkingHostess_Statics::Function_MetaDataParams), Z_Construct_UFunction_ARoom_RemoveWorkingHostess_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_ARoom_RemoveWorkingHostess_Statics::NewProp_id = { "id", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(Room_eventRemoveWorkingHostess_Parms, id), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ARoom_RemoveWorkingHostess_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ARoom_RemoveWorkingHostess_Statics::NewProp_id,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoom_RemoveWorkingHostess_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ARoom_RemoveWorkingHostess_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ARoom, nullptr, "RemoveWorkingHostess", nullptr, nullptr, Z_Construct_UFunction_ARoom_RemoveWorkingHostess_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ARoom_RemoveWorkingHostess_Statics::PropPointers), sizeof(Z_Construct_UFunction_ARoom_RemoveWorkingHostess_Statics::Room_eventRemoveWorkingHostess_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoom_RemoveWorkingHostess_Statics::Function_MetaDataParams), Z_Construct_UFunction_ARoom_RemoveWorkingHostess_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_ARoom_RemoveWorkingHostess_Statics::Room_eventRemoveWorkingHostess_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_ARoom_RemoveWorkingHostess()
 {
 	static UFunction* ReturnFunction = nullptr;
@@ -442,9 +577,10 @@ UFunction* Z_Construct_UFunction_ARoom_RemoveWorkingHostess()
 }
 DEFINE_FUNCTION(ARoom::execRemoveWorkingHostess)
 {
+	P_GET_PROPERTY(FIntProperty,Z_Param_id);
 	P_FINISH;
 	P_NATIVE_BEGIN;
-	P_THIS->RemoveWorkingHostess();
+	P_THIS->RemoveWorkingHostess(Z_Param_id);
 	P_NATIVE_END;
 }
 // End Class ARoom Function RemoveWorkingHostess
@@ -596,6 +732,8 @@ void ARoom::StaticRegisterNativesARoom()
 		{ "GetIsFullHostess", &ARoom::execGetIsFullHostess },
 		{ "GetIsOccupied", &ARoom::execGetIsOccupied },
 		{ "GetJobTeleportLocations", &ARoom::execGetJobTeleportLocations },
+		{ "GetMaxClientCapacity", &ARoom::execGetMaxClientCapacity },
+		{ "GetMaxHostessCapacity", &ARoom::execGetMaxHostessCapacity },
 		{ "GetTeleportLocation", &ARoom::execGetTeleportLocation },
 		{ "RemoveClient", &ARoom::execRemoveClient },
 		{ "RemoveWorkingHostess", &ARoom::execRemoveWorkingHostess },
@@ -642,17 +780,19 @@ struct Z_Construct_UClass_ARoom_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_ARoom_AddClient, "AddClient" }, // 1320310994
-		{ &Z_Construct_UFunction_ARoom_AddWorkingHostess, "AddWorkingHostess" }, // 1958954694
+		{ &Z_Construct_UFunction_ARoom_AddClient, "AddClient" }, // 541326043
+		{ &Z_Construct_UFunction_ARoom_AddWorkingHostess, "AddWorkingHostess" }, // 2817116543
 		{ &Z_Construct_UFunction_ARoom_GetCurrentClientCapacity, "GetCurrentClientCapacity" }, // 387738186
 		{ &Z_Construct_UFunction_ARoom_GetCurrentHostessCapacity, "GetCurrentHostessCapacity" }, // 3622451634
 		{ &Z_Construct_UFunction_ARoom_GetIsFullClients, "GetIsFullClients" }, // 3826001900
 		{ &Z_Construct_UFunction_ARoom_GetIsFullHostess, "GetIsFullHostess" }, // 549292719
 		{ &Z_Construct_UFunction_ARoom_GetIsOccupied, "GetIsOccupied" }, // 1959508740
 		{ &Z_Construct_UFunction_ARoom_GetJobTeleportLocations, "GetJobTeleportLocations" }, // 2296075497
+		{ &Z_Construct_UFunction_ARoom_GetMaxClientCapacity, "GetMaxClientCapacity" }, // 25998276
+		{ &Z_Construct_UFunction_ARoom_GetMaxHostessCapacity, "GetMaxHostessCapacity" }, // 1464999614
 		{ &Z_Construct_UFunction_ARoom_GetTeleportLocation, "GetTeleportLocation" }, // 465177180
-		{ &Z_Construct_UFunction_ARoom_RemoveClient, "RemoveClient" }, // 404076816
-		{ &Z_Construct_UFunction_ARoom_RemoveWorkingHostess, "RemoveWorkingHostess" }, // 1619948597
+		{ &Z_Construct_UFunction_ARoom_RemoveClient, "RemoveClient" }, // 556492731
+		{ &Z_Construct_UFunction_ARoom_RemoveWorkingHostess, "RemoveWorkingHostess" }, // 2852751505
 		{ &Z_Construct_UFunction_ARoom_SetIsOccupied, "SetIsOccupied" }, // 2036390293
 		{ &Z_Construct_UFunction_ARoom_SetTeleportJobLocation, "SetTeleportJobLocation" }, // 2895536899
 		{ &Z_Construct_UFunction_ARoom_SetTeleportLocation, "SetTeleportLocation" }, // 3189735629
@@ -716,10 +856,10 @@ ARoom::~ARoom() {}
 struct Z_CompiledInDeferFile_FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_Room_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ARoom, ARoom::StaticClass, TEXT("ARoom"), &Z_Registration_Info_UClass_ARoom, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ARoom), 2824637753U) },
+		{ Z_Construct_UClass_ARoom, ARoom::StaticClass, TEXT("ARoom"), &Z_Registration_Info_UClass_ARoom, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ARoom), 446674299U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_Room_h_2930376839(TEXT("/Script/PipeTalk"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_Room_h_407640885(TEXT("/Script/PipeTalk"),
 	Z_CompiledInDeferFile_FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_Room_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_Room_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

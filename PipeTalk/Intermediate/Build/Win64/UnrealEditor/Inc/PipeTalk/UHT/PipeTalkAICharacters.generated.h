@@ -15,10 +15,22 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define PIPETALK_PipeTalkAICharacters_generated_h
 
 #define FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_PipeTalkAICharacters_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execGetIsMoving); \
+	DECLARE_FUNCTION(execSetIsMoving); \
+	DECLARE_FUNCTION(execMoveAIAround); \
+	DECLARE_FUNCTION(execGetID); \
+	DECLARE_FUNCTION(execSetID); \
+	DECLARE_FUNCTION(execSetMaxSocialBattery); \
+	DECLARE_FUNCTION(execGetMaxSocialBattery); \
+	DECLARE_FUNCTION(execAddSocialBattery); \
+	DECLARE_FUNCTION(execGetCurrentSocialBattery); \
 	DECLARE_FUNCTION(execSetIsDoingATask); \
 	DECLARE_FUNCTION(execGetIsDoingATask); \
 	DECLARE_FUNCTION(execSetIsBeingPickedUp); \
-	DECLARE_FUNCTION(execGetIsBeingPickedUp);
+	DECLARE_FUNCTION(execGetIsBeingPickedUp); \
+	DECLARE_FUNCTION(execGetCucumberStat); \
+	DECLARE_FUNCTION(execGetIntelligenceStat); \
+	DECLARE_FUNCTION(execGetCharismaStat);
 
 
 #define FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_PipeTalkAICharacters_h_12_INCLASS_NO_PURE_DECLS \

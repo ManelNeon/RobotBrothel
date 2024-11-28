@@ -26,11 +26,26 @@ public:
 	int AmountOfHostess;
 
 	TArray<APipeTalkAICharacters*> HostessArray;
+	
+	UFUNCTION(BlueprintPure, Category = "Instance Functions")
+	int GetNumberOfHostess();
+
+	UFUNCTION(BlueprintPure, Category = "Instance Functions")
+	APipeTalkAICharacters* GetHostess(int id);
+
+	UFUNCTION(BlueprintCallable, Category = "Instance Functions")
+	void RemoveHostess(int id);
 
 	UFUNCTION(BlueprintCallable, Category = "Instance Functions")
 	void GiveXP(int amountOfXP);
 
 	UFUNCTION(BlueprintCallable, Category = "Instance Functions")
 	void GiveMoney(int amountOfMoney);
+
+	UFUNCTION(BlueprintPure, Category = "Instance Functions")
+	int GetMoney();
+
+	UFUNCTION(BlueprintPure, Category = "Instance Functions")
+	int GetLevel();
 	
 };

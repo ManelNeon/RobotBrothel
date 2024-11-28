@@ -16,6 +16,7 @@ enum class ERooms : uint8;
 #define PIPETALK_MapManager_generated_h
 
 #define FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_MapManager_h_26_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execCreateHostess); \
 	DECLARE_FUNCTION(execBuildRoom);
 
 

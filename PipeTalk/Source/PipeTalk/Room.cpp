@@ -56,9 +56,19 @@ int ARoom::GetCurrentHostessCapacity()
 	return _CurrentHostessCapacity;
 }
 
+int ARoom::GetMaxHostessCapacity()
+{
+	return _MaximumHostessCapacity;
+}
+
 int ARoom::GetCurrentClientCapacity()
 {
 	return _CurrentClientsCapacity;
+}
+
+int ARoom::GetMaxClientCapacity()
+{
+	return _MaximumClientsCapacity;
 }
 
 bool ARoom::GetIsFullHostess()
@@ -71,28 +81,46 @@ bool ARoom::GetIsFullClients()
 	return _IsFullClients;
 }
 
-void ARoom::AddWorkingHostess()
+void ARoom::AddWorkingHostess(int id)
 {
 	_CurrentHostessCapacity++;
+
+	_HostessID[_CurrentHostessCapacity - 1] = id;
+
+	_HostessTime[_CurrentHostessCapacity - 1] = 0;
 
 	if (_CurrentHostessCapacity == _MaximumHostessCapacity) _IsFullHostess = true;
 }
 
-void ARoom::RemoveWorkingHostess()
+void ARoom::RemoveWorkingHostess(int id)
 {
 	_IsFullHostess = false;
 
+	for (size_t i{ 0 }; i < _CurrentHostessCapacity; ++i)
+	{
+		if (_HostessID[i] == id)
+			_HostessID[i] = -1;
+	}
+
+	GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Yellow, "Hostess Removed From Pool");
+
 	_CurrentHostessCapacity--;
+
+	if (_CurrentHostessCapacity == 0) _IsOccupied = false;
 }
 
-void ARoom::AddClient()
+void ARoom::AddClient(int id)
 {
 	_CurrentClientsCapacity++;
+
+	_ClientID[_CurrentClientsCapacity - 1] = id;
+
+	_ClientTime[_CurrentClientsCapacity - 1] = 0;
 
 	if (_CurrentClientsCapacity == _MaximumClientsCapacity) _IsFullClients = true;
 }
 
-void ARoom::RemoveClient()
+void ARoom::RemoveClient(int id)
 {
 	_IsFullClients = false;
 
@@ -104,7 +132,20 @@ void ARoom::RemoveClient()
 void ARoom::BeginPlay()
 {
 	Super::BeginPlay();
+
+	_GameInstance = Cast<UPipeTalkGameInstance>(GetWorld()->GetGameInstance());
 	
+	for (size_t i{ 0 }; i < _MaximumHostessCapacity; ++i)
+	{
+		_HostessID.Add(-1);
+		_HostessTime.Add(-1);
+	}
+
+	for (size_t i{ 0 }; i < _MaximumClientsCapacity; ++i)
+	{
+		_ClientID.Add(-1);
+		_ClientTime.Add(-1);
+	}
 }
 
 // Called every frame

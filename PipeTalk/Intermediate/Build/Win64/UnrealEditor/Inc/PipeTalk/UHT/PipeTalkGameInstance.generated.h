@@ -9,14 +9,20 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class APipeTalkAICharacters;
 #ifdef PIPETALK_PipeTalkGameInstance_generated_h
 #error "PipeTalkGameInstance.generated.h already included, missing '#pragma once' in PipeTalkGameInstance.h"
 #endif
 #define PIPETALK_PipeTalkGameInstance_generated_h
 
 #define FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_PipeTalkGameInstance_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execGetLevel); \
+	DECLARE_FUNCTION(execGetMoney); \
 	DECLARE_FUNCTION(execGiveMoney); \
-	DECLARE_FUNCTION(execGiveXP);
+	DECLARE_FUNCTION(execGiveXP); \
+	DECLARE_FUNCTION(execRemoveHostess); \
+	DECLARE_FUNCTION(execGetHostess); \
+	DECLARE_FUNCTION(execGetNumberOfHostess);
 
 
 #define FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_PipeTalkGameInstance_h_14_INCLASS_NO_PURE_DECLS \

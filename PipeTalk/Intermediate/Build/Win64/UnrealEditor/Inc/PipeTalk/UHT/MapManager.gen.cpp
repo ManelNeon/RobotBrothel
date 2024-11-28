@@ -136,12 +136,43 @@ DEFINE_FUNCTION(AMapManager::execBuildRoom)
 }
 // End Class AMapManager Function BuildRoom
 
+// Begin Class AMapManager Function CreateHostess
+struct Z_Construct_UFunction_AMapManager_CreateHostess_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Map Manager" },
+		{ "ModuleRelativePath", "MapManager.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AMapManager_CreateHostess_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMapManager, nullptr, "CreateHostess", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AMapManager_CreateHostess_Statics::Function_MetaDataParams), Z_Construct_UFunction_AMapManager_CreateHostess_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_AMapManager_CreateHostess()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AMapManager_CreateHostess_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(AMapManager::execCreateHostess)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->CreateHostess();
+	P_NATIVE_END;
+}
+// End Class AMapManager Function CreateHostess
+
 // Begin Class AMapManager
 void AMapManager::StaticRegisterNativesAMapManager()
 {
 	UClass* Class = AMapManager::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
 		{ "BuildRoom", &AMapManager::execBuildRoom },
+		{ "CreateHostess", &AMapManager::execCreateHostess },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -174,6 +205,7 @@ struct Z_Construct_UClass_AMapManager_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_AMapManager_BuildRoom, "BuildRoom" }, // 3484814078
+		{ &Z_Construct_UFunction_AMapManager_CreateHostess, "CreateHostess" }, // 3456116624
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -231,10 +263,10 @@ struct Z_CompiledInDeferFile_FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_So
 		{ ERooms_StaticEnum, TEXT("ERooms"), &Z_Registration_Info_UEnum_ERooms, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 4271384310U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AMapManager, AMapManager::StaticClass, TEXT("AMapManager"), &Z_Registration_Info_UClass_AMapManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMapManager), 1128540035U) },
+		{ Z_Construct_UClass_AMapManager, AMapManager::StaticClass, TEXT("AMapManager"), &Z_Registration_Info_UClass_AMapManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMapManager), 1877539966U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_MapManager_h_2098616966(TEXT("/Script/PipeTalk"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_MapManager_h_3656023476(TEXT("/Script/PipeTalk"),
 	Z_CompiledInDeferFile_FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_MapManager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_MapManager_h_Statics::ClassInfo),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_MapManager_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GameDev_UnrealProjects_RobotBrothel_PipeTalk_Source_PipeTalk_MapManager_h_Statics::EnumInfo));

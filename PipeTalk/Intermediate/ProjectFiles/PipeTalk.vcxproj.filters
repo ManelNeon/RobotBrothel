@@ -30,6 +30,12 @@
     <Filter Include="Source\PipeTalk">
       <UniqueIdentifier>{83EFE99B-CF2E-3F88-92A7-1959C1E32BBA}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\PipeTalk\BarRoom.cpp">
+      <Filter>Source\PipeTalk</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PipeTalk\BarRoom.h">
+      <Filter>Source\PipeTalk</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\PipeTalk\MapManager.cpp">
       <Filter>Source\PipeTalk</Filter>
     </ClCompile>
@@ -79,6 +85,12 @@
       <Filter>Source\PipeTalk</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\PipeTalk\Plot.h">
+      <Filter>Source\PipeTalk</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\PipeTalk\RelaxationRoom.cpp">
+      <Filter>Source\PipeTalk</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PipeTalk\RelaxationRoom.h">
       <Filter>Source\PipeTalk</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\PipeTalk\Room.cpp">

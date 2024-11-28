@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "PipeTalkGameInstance.h"
 #include "GameFramework/Actor.h"
 #include "Room.generated.h"
 
@@ -37,7 +38,13 @@ public:
 	int GetCurrentHostessCapacity();
 
 	UFUNCTION(BlueprintPure, Category = "Room Functions")
+	int GetMaxHostessCapacity();
+
+	UFUNCTION(BlueprintPure, Category = "Room Functions")
 	int GetCurrentClientCapacity();
+
+	UFUNCTION(BlueprintPure, Category = "Room Functions")
+	int GetMaxClientCapacity();
 
 	UFUNCTION(BlueprintPure, Category = "Room Functions")
 	bool GetIsFullHostess();
@@ -46,16 +53,16 @@ public:
 	bool GetIsFullClients();
 
 	UFUNCTION(BlueprintCallable, Category = "Room Functions")
-	void AddWorkingHostess();
+	void AddWorkingHostess(int id);
 
 	UFUNCTION(BlueprintCallable, Category = "Room Functions")
-	void RemoveWorkingHostess();
+	void RemoveWorkingHostess(int id);
 	
 	UFUNCTION(BlueprintCallable, Category = "Room Functions")
-	void AddClient();
+	void AddClient(int id);
 
 	UFUNCTION(BlueprintCallable, Category = "Room Functions")
-	void RemoveClient();
+	void RemoveClient(int id);
 	
 	UPROPERTY(EditAnywhere, Category = "Room Variables")
 	int _MaximumHostessCapacity;
@@ -73,6 +80,14 @@ protected:
 	UPROPERTY(EditAnywhere, Category = "Room Variables")
 	TArray<FVector> _TeleportLocationJob;
 
+	TArray<int> _HostessID;
+
+	TArray<int> _HostessTime;
+
+	TArray<int> _ClientID;
+
+	TArray<int> _ClientTime;
+
 	int _CurrentHostessCapacity;
 
 	int _CurrentClientsCapacity;
@@ -82,6 +97,8 @@ protected:
 	bool _IsFullHostess;
 
 	bool _IsFullClients;
+
+	UPipeTalkGameInstance* _GameInstance;
 
 public:	
 	// Called every frame

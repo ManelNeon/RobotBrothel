@@ -3,6 +3,7 @@
 
 #include "PipeTalkAICharacters.h"
 #include "PipeTalkGameInstance.h"
+#include "NavigationSystem.h"
 
 // Sets default values
 APipeTalkAICharacters::APipeTalkAICharacters()
@@ -13,6 +14,8 @@ APipeTalkAICharacters::APipeTalkAICharacters()
 	_IsBeingPickedUp = false;
 
 	_IsDoingATask = false;
+
+	_ID = -1;
 }
 
 APipeTalkAICharacters::APipeTalkAICharacters(bool isClient)
@@ -43,6 +46,10 @@ void APipeTalkAICharacters::BeginPlay()
 	if(!_IsClient)
 		gameInstance->AmountOfHostess++;
 
+	_MaxSocialBattery = 100;
+	
+	_CurrentSocialBattery = _MaxSocialBattery;
+
 	if (gameInstance->AmountOfHostess == 1)
 	{
 		_CharismaStat = FMath::RandRange(0, 40);
@@ -63,6 +70,21 @@ void APipeTalkAICharacters::BeginPlay()
 void APipeTalkAICharacters::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+}
+
+int APipeTalkAICharacters::GetCharismaStat()
+{
+	return _CharismaStat;
+}
+
+int APipeTalkAICharacters::GetIntelligenceStat()
+{
+	return _IntelligenceStat;
+}
+
+bool APipeTalkAICharacters::GetCucumberStat()
+{
+	return _HasCucumber;
 }
 
 bool APipeTalkAICharacters::GetIsBeingPickedUp()
@@ -86,13 +108,66 @@ void APipeTalkAICharacters::SetIsDoingATask(bool isDoingTask)
 	_IsDoingATask = isDoingTask;
 }
 
+int APipeTalkAICharacters::GetCurrentSocialBattery()
+{
+	return _CurrentSocialBattery;
+}
+
+void APipeTalkAICharacters::AddSocialBattery(int socialBattery)
+{
+	_CurrentSocialBattery += socialBattery;
+
+	UE_LOG(LogTemp, Warning, TEXT("Social battery is %i"), _CurrentSocialBattery);
+	
+	if (_CurrentSocialBattery > _MaxSocialBattery) _CurrentSocialBattery = _MaxSocialBattery;
+}
+
+int APipeTalkAICharacters::GetMaxSocialBattery()
+{
+	return _MaxSocialBattery;
+}
+
+void APipeTalkAICharacters::SetMaxSocialBattery(int socialBattery)
+{
+	_MaxSocialBattery = socialBattery;
+}
+
 // Called to bind functionality to input
 void APipeTalkAICharacters::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 }
 
-void APipeTalkAICharacters::GetPicked()
+void APipeTalkAICharacters::SetID(int id)
 {
-	GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Yellow, TEXT("PICKED ME UP"));
+	_ID = id;
+}
+
+int APipeTalkAICharacters::GetID()
+{
+	return _ID;
+}
+
+void APipeTalkAICharacters::MoveAIAround()
+{
+	FName EventName = TEXT("MoveAround");
+
+	if (UFunction* Function = FindFunction(EventName))
+	{
+		ProcessEvent(Function, nullptr);
+	}
+	else
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("No Function With That Name"));
+	}
+}
+
+void APipeTalkAICharacters::SetIsMoving(bool isMoving)
+{
+	_IsMoving = isMoving;
+}
+
+bool APipeTalkAICharacters::GetIsMoving()
+{
+	return _IsMoving;
 }

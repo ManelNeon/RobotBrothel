@@ -32,6 +32,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Map Manager")
 	void BuildRoom(int row, int column, ERooms roomCode);
 
+	UFUNCTION(BlueprintCallable, Category = "Map Manager")
+	void CreateHostess();
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

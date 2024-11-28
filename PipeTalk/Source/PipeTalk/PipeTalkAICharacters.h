@@ -18,6 +18,15 @@ public:
 	APipeTalkAICharacters(bool isClient);
 
 	UFUNCTION(BlueprintPure, Category = "AI Logic")
+	int GetCharismaStat();
+
+	UFUNCTION(BlueprintPure, Category = "AI Logic")
+	int GetIntelligenceStat();
+	
+	UFUNCTION(BlueprintPure, Category = "AI Logic")
+	bool GetCucumberStat();
+
+	UFUNCTION(BlueprintPure, Category = "AI Logic")
 	bool GetIsBeingPickedUp();
 
 	UFUNCTION(BlueprintCallable, Category = "AI Logic")
@@ -29,9 +38,32 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "AI Logic")
 	void SetIsDoingATask(bool isDoingTask);
 
+	UFUNCTION(BlueprintPure, Category = "AI Logic")
+	int GetCurrentSocialBattery();
 
-	
-	void GetPicked();
+	UFUNCTION(BlueprintCallable, Category = "AI Logic")
+	void AddSocialBattery(int socialBattery);
+
+	UFUNCTION(BlueprintPure, Category = "AI Logic")
+	int GetMaxSocialBattery();
+
+	UFUNCTION(BlueprintCallable, Category = "AI Logic")
+	void SetMaxSocialBattery(int socialBattery);
+
+	UFUNCTION(BlueprintCallable, Category = "AI Logic")
+	void SetID(int id);
+
+	UFUNCTION(BlueprintPure, Category = "AI Logic")
+	int GetID();
+
+	UFUNCTION(BlueprintCallable, Category = "AI Logic")
+	void MoveAIAround();
+
+	UFUNCTION(BlueprintCallable, Category = "AI Logic")
+	void SetIsMoving(bool isMoving);
+
+	UFUNCTION(BlueprintPure, Category = "AI Logic")
+	bool GetIsMoving();
 
 protected:
 	// Called when the game starts or when spawned
@@ -51,7 +83,12 @@ protected:
 
 	int _MaxSocialBattery;
 
+	UPROPERTY(EditAnywhere, Category = "AI Definitions")
 	bool _IsClient;
+
+	int _ID;
+
+	bool _IsMoving;
 
 public:	
 	// Called every frame

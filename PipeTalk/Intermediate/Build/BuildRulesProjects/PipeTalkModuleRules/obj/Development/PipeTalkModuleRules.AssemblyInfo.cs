@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PipeTalkModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1076cbf00c3093484bc381e624e5d6c073712e70")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+711723e2298fa1e185f67e3b1062311b76dcbd38")]
 [assembly: System.Reflection.AssemblyProductAttribute("PipeTalkModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PipeTalkModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
