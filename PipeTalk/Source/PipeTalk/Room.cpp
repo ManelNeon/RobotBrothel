@@ -20,6 +20,27 @@ ARoom::ARoom()
 	_IsFullClients = false;
 }
 
+bool ARoom::GetFilledLocationSlot(int index)
+{
+	return IsFilledLocation[index];
+}
+
+
+int ARoom::FillLocation(int characterID)
+{
+	for (int i{ 0 }; i < IsFilledLocation.Num(); ++i)
+	{
+		if (!IsFilledLocation[i])
+		{
+			_GameInstance->HostessArray[characterID]->JobLocationID = i;
+			IsFilledLocation[i] = true;
+			return i;
+		}
+	}
+
+	return -1;
+}
+
 FVector ARoom::GetTeleportLocation()
 {
 	return _TeleportLocationBasic;
@@ -89,24 +110,22 @@ void ARoom::AddWorkingHostess(int id)
 
 	_HostessTime[_CurrentHostessCapacity - 1] = 0;
 
+	PrimaryActorTick.bCanEverTick = true;
+
 	if (_CurrentHostessCapacity == _MaximumHostessCapacity) _IsFullHostess = true;
 }
 
-void ARoom::RemoveWorkingHostess(int id)
+void ARoom::RemoveWorkingHostess()
 {
 	_IsFullHostess = false;
 
-	for (size_t i{ 0 }; i < _CurrentHostessCapacity; ++i)
-	{
-		if (_HostessID[i] == id)
-			_HostessID[i] = -1;
-	}
-
-	GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Yellow, "Hostess Removed From Pool");
-
 	_CurrentHostessCapacity--;
 
-	if (_CurrentHostessCapacity == 0) _IsOccupied = false;
+	if (_CurrentHostessCapacity == 0)
+	{
+		_IsOccupied = false;
+		PrimaryActorTick.bCanEverTick = false;
+	}
 }
 
 void ARoom::AddClient(int id)

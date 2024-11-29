@@ -39,20 +39,28 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	UPROPERTY(EditAnywhere, Category = "Blueprints Map Manager")
 	UClass* _EntranceClass;
 
+	UPROPERTY(EditAnywhere, Category = "Blueprints Map Manager")
 	UClass* _BarClass;
 
+	UPROPERTY(EditAnywhere, Category = "Blueprints Map Manager")
 	UClass* _RelaxationClass;
 
+	UPROPERTY(EditAnywhere, Category = "Blueprints Map Manager")
 	UClass* _TrainingClass;
 
+	UPROPERTY(EditAnywhere, Category = "Blueprints Map Manager")
 	UClass* _VIPClass;
 
+	UPROPERTY(EditAnywhere, Category = "Blueprints Map Manager")
 	UClass* _KnowledgeClass;
 
+	UPROPERTY(EditAnywhere, Category = "Blueprints Map Manager")
 	UClass* _PlotClass;
 
+	UPROPERTY(EditAnywhere, Category = "Blueprints Map Manager")
 	UClass* _AIClass;
 
 	//Row * 7 + Column

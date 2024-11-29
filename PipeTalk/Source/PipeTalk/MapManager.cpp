@@ -9,38 +9,6 @@ AMapManager::AMapManager()
 {
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
-	static ConstructorHelpers::FObjectFinder<UBlueprint> blueprint_finder(TEXT("Blueprint'/Game/Blueprints/BP_Entrance.BP_Entrance'"));
-
-	_EntranceClass = (UClass*)blueprint_finder.Object->GeneratedClass;
-
-	static ConstructorHelpers::FObjectFinder<UBlueprint> fourth_finder(TEXT("Blueprint'/Game/Blueprints/BP_BarRoom.BP_BarRoom'"));
-
-	_BarClass = (UClass*)fourth_finder.Object->GeneratedClass;
-
-	static ConstructorHelpers::FObjectFinder<UBlueprint> fifth_finder(TEXT("Blueprint'/Game/Blueprints/BP_RelaxationRoom.BP_RelaxationRoom'"));
-
-	_RelaxationClass = (UClass*)fifth_finder.Object->GeneratedClass;
-
-	static ConstructorHelpers::FObjectFinder<UBlueprint> sixth_finder(TEXT("Blueprint'/Game/Blueprints/BP_TrainingRoom.BP_TrainingRoom'"));
-
-	_TrainingClass = (UClass*)sixth_finder.Object->GeneratedClass;
-
-	static ConstructorHelpers::FObjectFinder<UBlueprint> seventh_finder(TEXT("Blueprint'/Game/Blueprints/BP_VIPRoom.BP_VIPRoom'"));
-
-	_VIPClass = (UClass*)seventh_finder.Object->GeneratedClass;
-
-	static ConstructorHelpers::FObjectFinder<UBlueprint> eighth_finder(TEXT("Blueprint'/Game/Blueprints/BP_KnowledgeRoom.BP_KnowledgeRoom'"));
-
-	_KnowledgeClass = (UClass*)eighth_finder.Object->GeneratedClass;
-
-	static ConstructorHelpers::FObjectFinder<UBlueprint> second_finder(TEXT("Blueprint'/Game/Blueprints/BP_Plot.BP_Plot'"));
-
-	_PlotClass = (UClass*)second_finder.Object->GeneratedClass;
-
-	static ConstructorHelpers::FObjectFinder<UBlueprint> third_finder(TEXT("Blueprint'/Game/Blueprints/BP_PipeTalkAI.BP_PipeTalkAI'"));
-
-	_AIClass = (UClass*)third_finder.Object->GeneratedClass;
 }
 
 
@@ -48,7 +16,6 @@ void AMapManager::BuildRoom(int row, int column, ERooms roomCode)
 {
 	if (!_Plots[row * 7 + column])
 	{
-		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("No Plot Here SUPPOSTAMENTE"));
 		return;
 	}
 

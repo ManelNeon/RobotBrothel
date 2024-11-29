@@ -26,6 +26,9 @@ public:
 	int AmountOfHostess;
 
 	TArray<APipeTalkAICharacters*> HostessArray;
+
+	UFUNCTION(BlueprintCallable, Category = "Instance Functions")
+	void DestroyItAll();
 	
 	UFUNCTION(BlueprintPure, Category = "Instance Functions")
 	int GetNumberOfHostess();
@@ -34,7 +37,7 @@ public:
 	APipeTalkAICharacters* GetHostess(int id);
 
 	UFUNCTION(BlueprintCallable, Category = "Instance Functions")
-	void RemoveHostess(int id);
+	bool RemoveHostess(int id);
 
 	UFUNCTION(BlueprintCallable, Category = "Instance Functions")
 	void GiveXP(int amountOfXP);

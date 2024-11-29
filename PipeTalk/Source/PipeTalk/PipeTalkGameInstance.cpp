@@ -9,9 +9,22 @@ UPipeTalkGameInstance::UPipeTalkGameInstance()
 
 	Level = 1;
 
-	Money = 1000;
+	Money = 1200;
 
 	AmountOfHostess = 0;
+}
+
+void UPipeTalkGameInstance::DestroyItAll()
+{
+	XP = 0;
+
+	Level = 1;
+
+	Money = 1200;
+
+	AmountOfHostess = 0;
+
+	HostessArray.Empty();
 }
 
 int UPipeTalkGameInstance::GetNumberOfHostess()
@@ -24,14 +37,16 @@ APipeTalkAICharacters* UPipeTalkGameInstance::GetHostess(int id)
 	return HostessArray[id];
 }
 
-void UPipeTalkGameInstance::RemoveHostess(int id)
+bool UPipeTalkGameInstance::RemoveHostess(int id)
 {
-	if (HostessArray[id]->GetIsDoingATask()) return;
+	if (HostessArray[id]->GetIsDoingATask()) return false;
 
 	HostessArray[id]->Destroy();
 
 	//THIS IS BAD, REALLY BAD, BUT I have to deliever the game in 1 day so FK IT MEMORY MANAGEMENT 0
-	HostessArray.RemoveAt(id, EAllowShrinking::No);
+	HostessArray[id] = nullptr;
+
+	return true;
 }
 
 void UPipeTalkGameInstance::GiveXP(int amountOfXP)

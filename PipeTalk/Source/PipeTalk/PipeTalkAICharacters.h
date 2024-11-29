@@ -65,6 +65,8 @@ public:
 	UFUNCTION(BlueprintPure, Category = "AI Logic")
 	bool GetIsMoving();
 
+	int JobLocationID;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

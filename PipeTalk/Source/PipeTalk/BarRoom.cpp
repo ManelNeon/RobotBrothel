@@ -2,10 +2,13 @@
 
 
 #include "BarRoom.h"
+#include "Kismet/GameplayStatics.h"
 
 void ABarRoom::BeginPlay()
 {
 	Super::BeginPlay();
+
+	PrimaryActorTick.bCanEverTick = false;
 }
 
 // Called every frame
@@ -22,31 +25,34 @@ void ABarRoom::Tick(float DeltaTime)
 	{
 		if (_HostessTime[i] == -1) 
 		{
-			GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Yellow, "No One In This Part");
 			continue;
 		}
 
+		_GameInstance->GiveMoney(MoneyToGivePerHostess);
+
+		UGameplayStatics::PlaySound2D(GetWorld(), MoneySound);
+
 		if (_HostessTime[i] == 3)
 		{
+			_HostessTime[i] = -1;
+
+			RemoveWorkingHostess();
+
 			_GameInstance->HostessArray[_HostessID[i]]->AddSocialBattery(-SocialBatteryToTake);
 
 			_GameInstance->HostessArray[_HostessID[i]]->SetIsDoingATask(false);
 
 			_GameInstance->HostessArray[_HostessID[i]]->MoveAIAround();
-			
-			RemoveWorkingHostess(_HostessID[i]);
 
-			_HostessTime[i] = -1;
+			IsFilledLocation[i] = false;
 
-			GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Yellow, "Hostess Roaming");
+			_GameInstance->HostessArray[_HostessID[i]]->JobLocationID = -1;
+
+			_HostessID[i] = -1;
 
 			continue;
 		}
 
 		_HostessTime[i]++;
-
-		GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Yellow, "Hostess Still Working");
-
-		_GameInstance->GiveMoney(MoneyToGivePerHostess);
 	}
 }

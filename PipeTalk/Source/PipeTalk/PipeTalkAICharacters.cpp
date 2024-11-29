@@ -3,7 +3,6 @@
 
 #include "PipeTalkAICharacters.h"
 #include "PipeTalkGameInstance.h"
-#include "NavigationSystem.h"
 
 // Sets default values
 APipeTalkAICharacters::APipeTalkAICharacters()
@@ -16,6 +15,8 @@ APipeTalkAICharacters::APipeTalkAICharacters()
 	_IsDoingATask = false;
 
 	_ID = -1;
+
+	JobLocationID = -1;
 }
 
 APipeTalkAICharacters::APipeTalkAICharacters(bool isClient)
@@ -39,7 +40,6 @@ void APipeTalkAICharacters::BeginPlay()
 
 	if (!gameInstance) 
 	{
-		GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Yellow, TEXT("No Pointer"));
 		return;
 	}
 	
@@ -158,7 +158,6 @@ void APipeTalkAICharacters::MoveAIAround()
 	}
 	else
 	{
-		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("No Function With That Name"));
 	}
 }
 

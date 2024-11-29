@@ -56,7 +56,7 @@ public:
 	void AddWorkingHostess(int id);
 
 	UFUNCTION(BlueprintCallable, Category = "Room Functions")
-	void RemoveWorkingHostess(int id);
+	void RemoveWorkingHostess();
 	
 	UFUNCTION(BlueprintCallable, Category = "Room Functions")
 	void AddClient(int id);
@@ -69,6 +69,15 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = "Room Variables")
 	int _MaximumClientsCapacity;
+
+	UPROPERTY(EditAnywhere, Category = "Room Variables")
+	TArray<bool> IsFilledLocation;
+
+	UFUNCTION(BlueprintCallable, Category = "Room Functions")
+	int FillLocation(int characterID);
+
+	UFUNCTION(BlueprintPure, Category = "Room Functions")
+	bool GetFilledLocationSlot(int index);
 	
 protected:
 	// Called when the game starts or when spawned

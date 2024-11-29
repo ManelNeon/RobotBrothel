@@ -26,4 +26,7 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = "Bar Room Stats")
 	int SocialBatteryToTake;
+
+	UPROPERTY(EditAnywhere, Category = "Bar Room Variables")
+	USoundWave* MoneySound;
 };

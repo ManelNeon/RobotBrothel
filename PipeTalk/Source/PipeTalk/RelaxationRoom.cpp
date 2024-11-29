@@ -6,6 +6,8 @@
 void ARelaxationRoom::BeginPlay()
 {
 	Super::BeginPlay();
+
+	PrimaryActorTick.bCanEverTick = false;
 }
 
 // Called every frame
@@ -18,25 +20,29 @@ void ARelaxationRoom::Tick(float DeltaTime)
 		return;
 	}
 
-	for (size_t i{ 0 }; i < _CurrentHostessCapacity; ++i)
+	for (size_t i{ 0 }; i < _MaximumHostessCapacity; ++i)
 	{
+		if (_HostessID[i] == -1) continue;
+
 		if (_GameInstance->HostessArray[_HostessID[i]]->GetCurrentSocialBattery() < _GameInstance->HostessArray[_HostessID[i]]->GetMaxSocialBattery())
 		{
 			_GameInstance->HostessArray[_HostessID[i]]->AddSocialBattery(SocialBatteryToGive);
 
-			GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Yellow, "Hostess Still Charging");
-
 			continue;
 		}
+
+		_HostessTime[i] = -1;
+
+		RemoveWorkingHostess();
+
+		IsFilledLocation[i] = false;
 
 		_GameInstance->HostessArray[_HostessID[i]]->SetIsDoingATask(false);
 
 		_GameInstance->HostessArray[_HostessID[i]]->MoveAIAround();
 
-		_HostessTime[i] = 0;
+		_GameInstance->HostessArray[_HostessID[i]]->JobLocationID = -1;
 
-		GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Yellow, "Hostess Roaming");
-
-		RemoveWorkingHostess(_HostessID[i]);
+		_HostessID[i] = -1;
 	}
 }
