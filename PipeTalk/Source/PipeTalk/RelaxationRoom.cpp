@@ -22,14 +22,23 @@ void ARelaxationRoom::Tick(float DeltaTime)
 
 	for (size_t i{ 0 }; i < _MaximumHostessCapacity; ++i)
 	{
-		if (_HostessID[i] == -1) continue;
+		if (_HostessID[i] == -1) 
+		{
+			UE_LOG(LogTemp, Warning, TEXT("No Hostess Here"));
+
+			continue;
+		}
 
 		if (_GameInstance->HostessArray[_HostessID[i]]->GetCurrentSocialBattery() < _GameInstance->HostessArray[_HostessID[i]]->GetMaxSocialBattery())
 		{
 			_GameInstance->HostessArray[_HostessID[i]]->AddSocialBattery(SocialBatteryToGive);
 
+			UE_LOG(LogTemp, Warning, TEXT("Hostess Here Money Given"));
+
 			continue;
 		}
+
+		UE_LOG(LogTemp, Warning, TEXT("Hostess Removed"));
 
 		_HostessTime[i] = -1;
 

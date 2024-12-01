@@ -25,6 +25,8 @@ void ABarRoom::Tick(float DeltaTime)
 	{
 		if (_HostessTime[i] == -1) 
 		{
+			UE_LOG(LogTemp, Warning, TEXT("No Hostess Here"));
+
 			continue;
 		}
 
@@ -32,8 +34,12 @@ void ABarRoom::Tick(float DeltaTime)
 
 		UGameplayStatics::PlaySound2D(GetWorld(), MoneySound);
 
+		UE_LOG(LogTemp, Warning, TEXT("Hostess Here Money Given"));
+
 		if (_HostessTime[i] == 3)
 		{
+			UE_LOG(LogTemp, Warning, TEXT("Hostess Removed"));
+
 			_HostessTime[i] = -1;
 
 			RemoveWorkingHostess();

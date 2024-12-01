@@ -106,13 +106,21 @@ void ARoom::AddWorkingHostess(int id)
 {
 	_CurrentHostessCapacity++;
 
-	_HostessID[_CurrentHostessCapacity - 1] = id;
+	for (size_t i{ 0 }; i < _MaximumHostessCapacity; ++i)
+	{
+		if (_HostessID[i] == -1)
+		{
+			_HostessID[i] = id;
 
-	_HostessTime[_CurrentHostessCapacity - 1] = 0;
+			_HostessTime[i] = 0;
 
-	PrimaryActorTick.bCanEverTick = true;
+			PrimaryActorTick.bCanEverTick = true;
 
-	if (_CurrentHostessCapacity == _MaximumHostessCapacity) _IsFullHostess = true;
+			if (_CurrentHostessCapacity == _MaximumHostessCapacity) _IsFullHostess = true;
+
+			return;
+		}
+	}
 }
 
 void ARoom::RemoveWorkingHostess()
